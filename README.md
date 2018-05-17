@@ -29,8 +29,9 @@ Now create assets folder New -> Folder -> Assets Folder   and paste json file on
 
 Step:- 3
   Open activity_main.xml and paste this inside parent layout
-  
-<com.airbnb.lottie.LottieAnimationView
+   
+    ...
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,13 +39,13 @@ Step:- 3
         app:lottie_autoPlay="true"
         app:lottie_fileName="animated_indonesian_first_president.json"
         app:lottie_loop="true"/>
-        
+     ...
        
 Step:- 4
     Open MainActivity.java and paste this inside onCreate(...)
 
-...    
-LottieAnimationView lottieAnimationView;
+    ...
+    LottieAnimationView lottieAnimationView;
     Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,7 @@ LottieAnimationView lottieAnimationView;
         button.setText(getString(R.string.pause));
         ...
     }
+
     
     public void onClick(View v) {
         if (lottieAnimationView.isAnimating()) {
